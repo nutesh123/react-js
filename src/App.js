@@ -1,6 +1,7 @@
 
+import Expensedate from "./componenets/expenses/Expensedate";
+import Expensedetails from "./componenets/expenses/Expensedetails";
 import Expenseitem from "./componenets/expenses/Expenseitem";
-import Expenseplace from "./componenets/expenses/Expenseplace";
 
 
 let  App = ()=> {
@@ -26,7 +27,7 @@ let  App = ()=> {
           date: new Date(2021, 5, 12),
         },
         {   
-            ID : 6 ,
+            ID : 'e5' ,
             title : 'rent',
             amount : 4000,
             date: new Date(2021, 2, 28),
@@ -37,7 +38,17 @@ let  App = ()=> {
         <div>
             <h1>expense item details</h1>
 
-            <Expenseitem></Expenseitem>
+          <Expensedate date={expenses[0].date}></Expensedate>
+          <Expensedetails title={expenses[0].title }  amount={expenses[0].amount}></Expensedetails>
+          <Expensedate date={expenses[1].date}></Expensedate>
+          <Expensedetails title={expenses[1].title }  amount={expenses[0].amount}></Expensedetails>
+          <Expensedate date={expenses[2].date}></Expensedate>
+          <Expensedetails title={expenses[2].title }  amount={expenses[0].amount}></Expensedetails>
+          <Expensedate date={expenses[3].date}></Expensedate>
+          <Expensedetails title={expenses[3].title }  amount={expenses[0].amount}></Expensedetails>
+          <Expensedate date={expenses[4].date}></Expensedate>
+          <Expensedetails title={expenses[4].title }  amount={expenses[0].amount}></Expensedetails>
+          
 
         </div>
     ) ;

@@ -4,22 +4,21 @@ import './Expense.css' ;
 
 
 
-function Expenseitem(props){
-
-    const date= new Date(2021,2,1);
-    const title= 'car insurance';
-    const amount=5363 ;
-
+function Expenseitem()
+{
 
     return (
-<div className='expense-item'>
+<div className="expense-item h2">
 
-<Expensedate date ={props.date} />
+    
+<Expensedetails></Expensedetails>
 
-<Expensedetails amount={props.amount} />
+<Expensedate></Expensedate>
+
 
 </div>
 )
+
 }
 
-export default Expenseitem;
+export default Expenseitem ;
