@@ -11,15 +11,15 @@ const Expenseform=()=>{
 
 
     function titlechangehandler (event){
-        console.log(event.target.value)
+        newtitle(event.target.value)
 
     }
-    function amountchangehandler (){
-
+    function amountchangehandler (event){
+        newamount(event.target.value)
     }
 
-    function datechangehandler(){
-
+    function datechangehandler(event){
+        newdate(event.target.value)
     }
 
     return(<form>
