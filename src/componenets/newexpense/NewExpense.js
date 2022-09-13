@@ -5,10 +5,21 @@ import './NewExpense.css' ;
 import './Expenseform' ;
 import Expenseform from "./Expenseform";
 
-const NewExpense =()=>{
+const NewExpense =(props)=>{
+
+  const getexpenseformdeta=(formdeta)=>{
+
+    const expensedeta={
+      ...formdeta
+    }
+    console.log(formdeta)
+
+    props.sentdetatoappjs(expensedeta)
+
+  }
     return (
         <div className="new-expense">
-         <Expenseform></Expenseform>
+         <Expenseform Expenseformdeta={getexpenseformdeta}/>
         </div>
     )
 }

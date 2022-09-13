@@ -5,7 +5,7 @@ import Card from './componenets/UI/Card' ;
 import NewExpense from "./componenets/newexpense/NewExpense";
 import './componenets/expenses/Expense.css' ;
 
-let App = () => {
+let App = (props) => {
   const expenses = [
     {
       id: "e1",
@@ -34,9 +34,15 @@ let App = () => {
     },
   ];
 
+  const getnewexpensedeta=(newexpensedeta)=>{
+     console.log(newexpensedeta)
+  }
+
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense sentdetatoappjs={getnewexpensedeta}/>
+
+
       <div className="listclass">
         <Expenseitem
           date={expenses[0].date}
