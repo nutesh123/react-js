@@ -54,7 +54,7 @@ const Expenseform=(props)=>{
             <label>Date</label>
             <input type='date' value={date} onChange={datechangehandler}/>
             </div>
-    
+                <button type="button" onClick={props.onCancal} >Cancal</button>
                 <button>Add Expense</button>
         
         </div>
