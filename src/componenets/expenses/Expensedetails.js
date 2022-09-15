@@ -21,15 +21,19 @@ function Expensedetails(props) {
       <ExpensesFilter
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
-      />{' '}
-      {filteredExpnses.map((xpens) => (
-        <Expenseitem
+      />
+      {filteredExpnses.length=== 1 && <p>"Only single Expense here. Please add more..."</p>}
+      {filteredExpnses.length ===0 &&<p>no expenses found</p>}
+      {filteredExpnses.length > 0 &&
+        filteredExpnses.map((xpens) => (
+          <Expenseitem
           date={xpens.date}
           title={xpens.title}
           amount={xpens.amount}
         />
-      ))}
-
+         )
+        )
+      }
       <button className="delete-button">delete expense</button>
     </div>
   );
