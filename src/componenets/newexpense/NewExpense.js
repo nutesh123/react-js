@@ -12,11 +12,12 @@ const NewExpense =(props)=>{
     const expensedeta={
       ...formdeta
     }
-    console.log(formdeta)
+    console.log(expensedeta)
 
     props.sentdetatoappjs(expensedeta)
 
   }
+
     return (
         <div className="new-expense">
          <Expenseform Expenseformdeta={getexpenseformdeta}/>

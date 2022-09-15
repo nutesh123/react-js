@@ -26,14 +26,15 @@ const Expenseform=(props)=>{
         event.preventDefault();
 
         const expenseObj = {
-            Titlename:title ,
-            Amount:amount ,
-            Date:new Date(date) 
+            title:title ,
+            amount:amount ,
+            date:new Date(date) 
         } ;
         
+        console.log(expenseObj)
+
         props.Expenseformdeta(expenseObj)
 
-        console.log(expenseObj)
         newtitle('')
         newamount('')
         newdate('')
