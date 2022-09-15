@@ -10,6 +10,9 @@ function Expensedetails(props) {
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
+  const filteredExpnses = props.expenses.filter((expense) => {
+    return expense.date.getFullYear().toString() === filteredYear;
+  });
 
   console.log(props.expenses);
 
@@ -18,8 +21,8 @@ function Expensedetails(props) {
       <ExpensesFilter
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
-      />
-      {props.expenses.map((xpens) => (
+      />{' '}
+      {filteredExpnses.map((xpens) => (
         <Expenseitem
           date={xpens.date}
           title={xpens.title}
