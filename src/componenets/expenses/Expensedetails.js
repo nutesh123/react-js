@@ -2,7 +2,8 @@ import React , {useState} from "react";
 
 import App from "../../App";
 import Expenseitem from "./Expenseitem";
-import ExpensesFilter from "../Filter";
+import ExpensesFilter from "./Filter";
+import Chartexpense from "./Chartexpense";
 
 function Expensedetails(props) {
   const [filteredYear, setFilteredYear] = useState("2020");
@@ -22,6 +23,7 @@ function Expensedetails(props) {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
+      <Chartexpense expenses={filteredExpnses}/>
       {filteredExpnses.length=== 1 && <p>"Only single Expense here. Please add more..."</p>}
       {filteredExpnses.length ===0 &&<p>no expenses found</p>}
       {filteredExpnses.length > 0 &&
